@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad | Habita: hipotecas y préstamos</title>
+  <link rel="canonical" href="https://templyon.github.io/habita-privacy/">
+  <meta name="description" content="Política de Privacidad Oficial de Habita: hipotecas y préstamos. Arquitectura 100% Zero-Cloud, privacidad garantizada y cero cesión de datos.">
+  <meta name="theme-color" content="#0B0F17">
+  <style>
+    :root {
+      --bg-primary: #0B0F17;
+      --bg-surface: #111827;
+      --bg-elevated: #1F2937;
+      --border-subtle: #2A3649;
+      --text-primary: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --accent-sky: #38BDF8;
+      --accent-emerald: #10B981;
+      --accent-indigo: #6366F1;
+      --card-radius: 16px;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-family);
+      line-height: 1.65;
+      padding: 24px 16px 80px 16px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-wrapper {
+      width: 100%;
+      max-width: 860px;
+    }
+
+    header {
+      background: linear-gradient(180deg, rgba(30, 41, 59, 0.7) 0%, rgba(17, 24, 39, 0.9) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--card-radius);
+      padding: 32px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(12px);
+      text-align: center;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: var(--accent-emerald);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .app-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1E3A8A 0%, #0284C7 100%);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.3);
+    }
+
+    .app-icon svg {
+      width: 36px;
+      height: 36px;
+      fill: #FFFFFF;
+    }
+
+    h1 {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .meta-box {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: var(--accent-sky);
+      font-weight: 500;
+    }
+
+    /* Selector de Idiomas */
+    .lang-switcher-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--card-radius);
+      padding: 14px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lang-label {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-right: 6px;
+    }
+
+    .lang-btn {
+      background: var(--bg-elevated);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn:hover {
+      color: var(--text-primary);
+      border-color: var(--accent-sky);
+      transform: translateY(-1px);
+    }
+
+    .lang-btn.active {
+      background: var(--accent-sky);
+      color: #0B0F17;
+      border-color: var(--accent-sky);
+      font-weight: 700;
+    }
+
+    /* Contenido de la Política */
+    .policy-content {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--card-radius);
+      padding: 32px 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .policy-section {
+      margin-bottom: 32px;
+    }
+
+    .policy-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-section h2 {
+      font-size: 1.25rem;
+      color: var(--accent-sky);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 8px;
+    }
+
+    .policy-section h3 {
+      font-size: 1.05rem;
+      color: var(--text-primary);
+      margin: 16px 0 8px 0;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: #CBD5E1;
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+
+    ul {
+      margin: 12px 0 16px 24px;
+      color: #CBD5E1;
+      font-size: 0.95rem;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .highlight-card {
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    .highlight-card p {
+      color: #E2E8F0;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .contact-card {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-top: 24px;
+    }
+
+    .contact-card a {
+      color: var(--accent-sky);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 36px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 20px;
+    }
+
+    /* Ocultar secciones no activas */
+    .lang-pane {
+      display: none;
+    }
+
+    .lang-pane.active {
+      display: block;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 16px 10px 60px 10px;
+      }
+      header {
+        padding: 24px 16px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      .policy-content {
+        padding: 22px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-wrapper">
+
+    <!-- Encabezado Oficial -->
+    <header>
+      <div class="brand-badge">
+        <svg style="width:14px;height:14px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        <span>Zero-Cloud Architecture & Verified Math</span>
+      </div>
+      <div class="app-icon">
+        <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+      </div>
+      <h1>Habita: hipotecas y préstamos</h1>
+      <p class="subtitle">Política de Privacidad y Tratamiento de Datos Personales • Privacy Policy</p>
+      <div class="meta-box">Identificador: <code>com.hipoteca.simulador</code> • Última actualización: Octubre 2026</div>
+    </header>
+
+    <!-- Barra de Selección de Idioma -->
+    <div class="lang-switcher-card">
+      <span class="lang-label">Idioma / Language:</span>
+      <button class="lang-btn active" onclick="switchLang('es')">🇪🇸 Español</button>
+      <button class="lang-btn" onclick="switchLang('gl')">🇪🇸 Galego</button>
+      <button class="lang-btn" onclick="switchLang('en')">🇬🇧 English</button>
+      <button class="lang-btn" onclick="switchLang('fr')">🇫🇷 Français</button>
+      <button class="lang-btn" onclick="switchLang('pt')">🇵🇹 Português</button>
+      <button class="lang-btn" onclick="switchLang('de')">🇩🇪 Deutsch</button>
+    </div>
+
+    <!-- Contenedor Principal de Políticas -->
+    <div class="policy-content">
+
+      <!-- =================================================================== -->
+      <!-- 1. ESPAÑOL -->
+      <!-- =================================================================== -->
+      <div id="pane-es" class="lang-pane active">
+        <div class="policy-section">
+          <h2>1. Compromiso Fundamental de Privacidad (Zero-Cloud)</h2>
+          <p>La aplicación móvil <strong>Habita: hipotecas y préstamos</strong> (desarrollada bajo el paquete <code>com.hipoteca.simulador</code>) ha sido diseñada desde su concepción bajo el principio de <strong>Privacidad por Diseño (Privacy by Design)</strong> y una estricta arquitectura <strong>100% Zero-Cloud</strong>.</p>
+          <div class="highlight-card">
+            <p><strong>GARANTÍA ABSOLUTA:</strong> Habita no recopila, no almacena en servidores externos, no transmite, no analiza ni cede ningún dato personal ni financiero a terceros, entidades bancarias, entidades aseguradoras ni brokers hipotecarios.</p>
+          </div>
+          <p>Toda la información que usted introduce en la aplicación permanece de forma exclusiva y soberana en el almacenamiento interno de su dispositivo físico.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>2. Datos Financieros y Simulaciones</h2>
+          <p>Los datos correspondientes a sus hipotecas, préstamos personales, tipos de interés (TIN, Euríbor), cuotas, calendarios de amortización, deducciones o gastos de formalización se procesan en memoria local y se persisten en una base de datos local SQLite cifrada (Room). Ningún algoritmo remoto tiene acceso a su cartera financiera.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>3. Seguridad Biométrica (BiometricPrompt)</h2>
+          <p>La aplicación ofrece la opción de activar el bloqueo biométrico (huella dactilar o reconocimiento facial). Dicho bloqueo se ejecuta mediante las API nativas del sistema operativo Android (<code>BiometricPrompt</code>) y el elemento seguro de hardware (Secure Element / TEE). <strong>Habita nunca tiene acceso a sus datos biométricos</strong>, limitándose a recibir la confirmación de éxito o fracaso otorgada por el propio sistema operativo.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>4. Copias de Seguridad Locales (Búnker Criptográfico)</h2>
+          <p>La función de copia de seguridad permite generar un archivo local cifrado mediante el algoritmo <strong>AES-256-GCM</strong> con derivación de clave PBKDF2 basada en una contraseña que usted mismo define. La aplicación no sube automáticamente este archivo a ninguna nube. Usted es el único custodio del archivo y de su contraseña.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>5. Facturación y Compras In-App (Google Play Billing)</h2>
+          <p>La adquisición de la licencia de por vida <strong>Habita PRO</strong> se procesa exclusivamente a través del sistema oficial de facturación de <strong>Google Play</strong>. Habita no tiene acceso a sus datos de tarjeta de crédito, cuentas bancarias ni dirección de facturación. Todo el proceso está sujeto a los términos de servicio y privacidad de Google LLC.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>6. Cero Analíticas y Cero Publicidad</h2>
+          <p>La aplicación <strong>no incluye SDKs de telemetría invasiva, rastreadores publicitarios ni redes de anuncios</strong> (como Facebook SDK, Google Analytics, Firebase Analytics, Adjust o AppsFlyer). Tampoco solicita permisos de ubicación ni de contactos.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>7. Cumplimiento Legal (RGPD, LOPD-GDD y Normativas Internacionales)</h2>
+          <p>En cumplimiento del Reglamento General de Protección de Datos (RGPD UE 2016/679) y de la Ley Orgánica 3/2018 (LOPD-GDD):</p>
+          <ul>
+            <li><strong>Derecho de Acceso, Rectificación y Supresión:</strong> Al no existir servidores ni cuentas de usuario, el control es absoluto. Para eliminar permanentemente todos sus datos, basta con borrar los datos de la app desde los Ajustes de Android o desinstalar la aplicación.</li>
+            <li><strong>Portabilidad:</strong> Puede exportar en cualquier momento sus cálculos en formato PDF o JSON cifrado directamente a su almacenamiento local.</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h2>8. Contacto y Soporte</h2>
+          <p>Para cualquier consulta legal o técnica relativa a la aplicación, puede ponerse en contacto con el equipo de desarrollo:</p>
+          <div class="contact-card">
+            <p><strong>Correo electrónico de contacto:</strong> <a href="mailto:templyon.dev@gmail.com">templyon.dev@gmail.com</a></p>
+            <p><strong>Repositorio Oficial:</strong> <a href="https://github.com/templyon/habita-privacy" target="_blank" rel="noopener">github.com/templyon/habita-privacy</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================================================================== -->
+      <!-- 2. GALEGO -->
+      <!-- =================================================================== -->
+      <div id="pane-gl" class="lang-pane">
+        <div class="policy-section">
+          <h2>1. Compromiso Fundamental de Privacidade (Zero-Cloud)</h2>
+          <p>A aplicación móbil <strong>Habita: hipotecas y préstamos</strong> (desenvolvida baixo o paquete <code>com.hipoteca.simulador</code>) foi deseñada dende a súa orixe baixo o principio de <strong>Privacidade dende o Deseño (Privacy by Design)</strong> e unha estrita arquitectura <strong>100% Zero-Cloud</strong>.</p>
+          <div class="highlight-card">
+            <p><strong>GARANTÍA ABSOLUTA:</strong> Habita non recolle, non almacena en servidores externos, non transmite, non analiza nin cede ningún dato persoal nin financeiro a terceiros, entidades bancarias, aseguradoras nin brokers hipotecarios.</p>
+          </div>
+          <p>Toda a información que vostede introduce na aplicación permanece de xeito exclusivo e soberano no almacenamento interno do seu dispositivo físico.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>2. Datos Financeiros e Simulacións</h2>
+          <p>Os datos correspondentes ás súas hipotecas, préstamos persoais, tipos de xuro (TIN, Euríbor), cotas, cadros de amortización, deducións ou gastos de formalización procesanse na memoria local e persisten nunha base de datos local SQLite cifrada (Room). Ningún algoritmo remoto ten acceso á súa carteira financeira.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>3. Seguridade Biométrica (BiometricPrompt)</h2>
+          <p>A aplicación ofrece a opción de activar o bloqueo biométrico (pegada dixital ou recoñecemento facial). Dito bloqueo execútase mediante as API nativas do sistema operativo Android (<code>BiometricPrompt</code>) e o elemento seguro de hardware (Secure Element / TEE). <strong>Habita nunca ten acceso aos seus datos biométricos</strong>.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>4. Copias de Seguridade Locais (Búnker Criptográfico)</h2>
+          <p>A función de copia de seguridade permite xerar un ficheiro local cifrado mediante o algoritmo <strong>AES-256-GCM</strong> con derivación de clave PBKDF2 baseada nun contrasinal definido polo propio usuario. A aplicación non sube automaticamente este ficheiro a ningunha nube.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>5. Facturación e Compras In-App (Google Play Billing)</h2>
+          <p>A adquisición da licenza permanente <strong>Habita PRO</strong> procesase exclusivamente a través do sistema oficial de facturación de <strong>Google Play</strong>. Habita non almacena nin accede aos datos da súa tarxeta nin contas bancarias.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>6. Cero Analíticas e Cero Publicidade</h2>
+          <p>A aplicación <strong>non inclúe rastreadores publicitarios, analíticas invasivas nin redes de anuncios</strong>. Tampouco solicita permisos de localización nin axenda de contactos.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>7. Contacto e Soporte</h2>
+          <div class="contact-card">
+            <p><strong>Correo electrónico de contacto:</strong> <a href="mailto:templyon.dev@gmail.com">templyon.dev@gmail.com</a></p>
+            <p><strong>Repositorio Oficial:</strong> <a href="https://github.com/templyon/habita-privacy" target="_blank" rel="noopener">github.com/templyon/habita-privacy</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================================================================== -->
+      <!-- 3. ENGLISH -->
+      <!-- =================================================================== -->
+      <div id="pane-en" class="lang-pane">
+        <div class="policy-section">
+          <h2>1. Core Privacy Commitment (Zero-Cloud)</h2>
+          <p>The mobile application <strong>Habita: Mortgages & Loans</strong> (package identifier: <code>com.hipoteca.simulador</code>) has been engineered from the ground up under the strict principle of <strong>Privacy by Design</strong> and a genuine <strong>100% Zero-Cloud architecture</strong>.</p>
+          <div class="highlight-card">
+            <p><strong>ABSOLUTE GUARANTEE:</strong> Habita does NOT collect, store on remote servers, transmit, profile, or sell any personal or financial information to third parties, banks, lending institutions, or mortgage brokers.</p>
+          </div>
+          <p>All data entered into the application remains solely and sovereignly on your physical device’s local storage.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>2. Financial Calculations & Data Storage</h2>
+          <p>Information regarding your mortgages, personal loans, interest rates, payment schedules, and calculations is processed in device memory and persisted locally using an encrypted SQLite database (Android Room). No remote server or external API has access to your financial records.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>3. Biometric Security (BiometricPrompt)</h2>
+          <p>Habita supports hardware-backed biometric authentication (fingerprint or facial unlock). This authentication is handled strictly by Android’s native <code>BiometricPrompt</code> API and the device’s Hardware Security Module (TEE/Secure Element). <strong>Habita never accesses or stores your raw biometric data</strong>.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>4. Local Encrypted Backups</h2>
+          <p>The backup utility creates a standalone backup file encrypted via industry-standard <strong>AES-256-GCM</strong> with a PBKDF2-derived key based on your custom passphrase. The app never uploads your backup files to any remote server or cloud automatically.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>5. In-App Purchases (Google Play Billing)</h2>
+          <p>Upgrading to the <strong>Habita PRO</strong> lifetime license is handled exclusively through <strong>Google Play’s official In-App Billing system</strong>. Habita does not collect, process, or store credit card numbers, billing addresses, or payment credentials.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>6. Zero Third-Party Trackers & Zero Ads</h2>
+          <p>The app contains <strong>no advertising SDKs, no behavioral trackers, and no telemetry frameworks</strong> (such as Facebook SDK, Google Analytics, Firebase Analytics, Adjust, or AppsFlyer). The app operates without tracking your location or contacts.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>7. User Rights (GDPR & Global Privacy Frameworks)</h2>
+          <p>Under the EU General Data Protection Regulation (GDPR) and global privacy laws, you possess unconditional control over your data. Because no user accounts or remote databases exist, deleting your data is instant: simply clear application storage in Android settings or uninstall the app.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>8. Contact Information</h2>
+          <div class="contact-card">
+            <p><strong>Official Support Email:</strong> <a href="mailto:templyon.dev@gmail.com">templyon.dev@gmail.com</a></p>
+            <p><strong>GitHub Repository:</strong> <a href="https://github.com/templyon/habita-privacy" target="_blank" rel="noopener">github.com/templyon/habita-privacy</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================================================================== -->
+      <!-- 4. FRANÇAIS -->
+      <!-- =================================================================== -->
+      <div id="pane-fr" class="lang-pane">
+        <div class="policy-section">
+          <h2>1. Engagement Fondamental de Confidentialité (Zero-Cloud)</h2>
+          <p>L'application mobile <strong>Habita: prêts et hypothèques</strong> (identifiant de paquet : <code>com.hipoteca.simulador</code>) a été conçue selon le principe de <strong>Protection de la vie privée dès la conception (Privacy by Design)</strong> et une architecture stricte <strong>100% Zero-Cloud</strong>.</p>
+          <div class="highlight-card">
+            <p><strong>GARANTIE TOTALE :</strong> Habita ne collecte, ne stocke sur aucun serveur externe, ne transmet et ne cède aucune donnée personnelle ou financière à des tiers, banques ou courtiers.</p>
+          </div>
+          <p>Toutes les données saisies demeurent exclusivement stockées sur la mémoire interne de votre appareil physique.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>2. Données Financières et Simulations</h2>
+          <p>Les montants de vos emprunts, taux d'intérêt, mensualités et tableaux d'amortissement sont traités localement et enregistrés dans une base de données chiffrée SQLite (Room). Aucun serveur distant n'a accès à vos données.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>3. Sécurité Biométrique</h2>
+          <p>L'authentification par empreinte digitale ou reconnaissance faciale s'effectue via les API officielles d'Android (<code>BiometricPrompt</code>). <strong>Habita n'a jamais accès à vos données biométriques</strong>.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>4. Sauvegardes Locales Chiffrées</h2>
+          <p>L'exportation de sauvegarde génère un fichier chiffré selon la norme <strong>AES-256-GCM</strong> avec dérivation PBKDF2. L'application ne télécharge aucun fichier vers le cloud sans votre intervention manuelle.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>5. Achats Intégrés (Google Play Billing)</h2>
+          <p>L'achat de la version <strong>Habita PRO</strong> est géré exclusivement par le système de facturation de Google Play. Habita ne stocke aucune coordonnée bancaire.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>6. Contact et Support</h2>
+          <div class="contact-card">
+            <p><strong>Courriel de contact :</strong> <a href="mailto:templyon.dev@gmail.com">templyon.dev@gmail.com</a></p>
+            <p><strong>Dépôt Officiel :</strong> <a href="https://github.com/templyon/habita-privacy" target="_blank" rel="noopener">github.com/templyon/habita-privacy</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================================================================== -->
+      <!-- 5. PORTUGUÊS -->
+      <!-- =================================================================== -->
+      <div id="pane-pt" class="lang-pane">
+        <div class="policy-section">
+          <h2>1. Compromisso Fundamental de Privacidade (Zero-Cloud)</h2>
+          <p>O aplicativo móvel <strong>Habita: hipotecas e empréstimos</strong> (pacote: <code>com.hipoteca.simulador</code>) foi desenvolvido sob o princípio de <strong>Privacidade por Design</strong> e uma arquitetura <strong>100% Zero-Cloud</strong>.</p>
+          <div class="highlight-card">
+            <p><strong>GARANTIA TOTAL:</strong> O Habita não recolhe, não armazena em servidores remotos, não transfere e não comercializa quaisquer dados pessoais ou financeiros com terceiros, bancos ou corretores.</p>
+          </div>
+          <p>Todas as informações inseridas residem de forma estrita e soberana no armazenamento interno do seu aparelho.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>2. Processamento Local e Criptografia</h2>
+          <p>Seus cálculos de financiamento, taxas de juros e cronogramas de amortização são processados no processador local e gravados em banco de dados SQLite seguro (Room).</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>3. Biometria e Segurança</h2>
+          <p>O desbloqueio biométrico utiliza as APIs padrão do Android (<code>BiometricPrompt</code>) e o chip de segurança do dispositivo. <strong>O Habita nunca lê nem armazena sua biometria</strong>.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>4. Compras no Aplicativo (Google Play Billing)</h2>
+          <p>A compra da versão permanente <strong>Habita PRO</strong> é intermediada 100% pelo sistema seguro do Google Play. Nenhum número de cartão de crédito é recebido pelo aplicativo.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>5. Contato e Suporte</h2>
+          <div class="contact-card">
+            <p><strong>E-mail de suporte:</strong> <a href="mailto:templyon.dev@gmail.com">templyon.dev@gmail.com</a></p>
+            <p><strong>Repositório Oficial:</strong> <a href="https://github.com/templyon/habita-privacy" target="_blank" rel="noopener">github.com/templyon/habita-privacy</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================================================================== -->
+      <!-- 6. DEUTSCH -->
+      <!-- =================================================================== -->
+      <div id="pane-de" class="lang-pane">
+        <div class="policy-section">
+          <h2>1. Datenschutz-Grundsatz (Zero-Cloud-Architektur)</h2>
+          <p>Die mobile Anwendung <strong>Habita: Hypotheken & Kredite</strong> (Paketname: <code>com.hipoteca.simulador</code>) basiert auf dem Prinzip <strong>Privacy by Design</strong> und einer kompromisslosen <strong>100% Zero-Cloud-Architektur</strong>.</p>
+          <div class="highlight-card">
+            <p><strong>GARANTIE:</strong> Habita erfasst, speichert, analysiert oder überträgt KEINE personenbezogenen oder finanziellen Daten an externe Server, Banken oder Finanzvermittler.</p>
+          </div>
+          <p>Alle eingegebenen Darlehensdaten verbleiben ausschließlich lokal auf Ihrem persönlichen Mobilgerät.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>2. Lokale Datenspeicherung</h2>
+          <p>Ihre Kreditdaten und Tilgungspläne werden in einer lokalen, verschlüsselten SQLite-Datenbank (Room) auf Ihrem Gerät verarbeitet und gesichert.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>3. Biometrische Sicherheit</h2>
+          <p>Die optionale biometrische Entsperrung verwendet die offiziellen Android-APIs (<code>BiometricPrompt</code>) und das Hardware-Sicherheitsmodul. <strong>Habita hat zu keinem Zeitpunkt Zugriff auf biometrische Daten</strong>.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>4. Google Play In-App-Käufe</h2>
+          <p>Die Lizenzierung von <strong>Habita PRO</strong> erfolgt ausschließlich über das offizielle Abrechnungssystem von Google Play. Es werden keine Zahlungsdaten durch Habita gespeichert.</p>
+        </div>
+
+        <div class="policy-section">
+          <h2>5. Kontakt und Support</h2>
+          <div class="contact-card">
+            <p><strong>Support-E-Mail:</strong> <a href="mailto:templyon.dev@gmail.com">templyon.dev@gmail.com</a></p>
+            <p><strong>Offizielles GitHub-Repository:</strong> <a href="https://github.com/templyon/habita-privacy" target="_blank" rel="noopener">github.com/templyon/habita-privacy</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Pie de Página -->
+    <footer>
+      <p>© 2026 Habita: hipotecas y préstamos · 100% Zero-Cloud Architecture · All rights reserved.</p>
+      <p style="margin-top:4px;"><a href="https://templyon.github.io/habita-privacy/" style="color:var(--text-secondary);text-decoration:none;">https://templyon.github.io/habita-privacy/</a></p>
+    </footer>
+
+  </div>
+
+  <!-- Script de Detección Automática y Cambio de Idioma -->
+  <script>
+    const supportedLangs = ['es', 'gl', 'en', 'fr', 'pt', 'de'];
+
+    function switchLang(lang) {
+      if (!supportedLangs.includes(lang)) {
+        lang = 'en';
+      }
+
+      // Actualizar pestañas de contenido
+      document.querySelectorAll('.lang-pane').forEach(el => el.classList.remove('active'));
+      const targetPane = document.getElementById('pane-' + lang);
+      if (targetPane) {
+        targetPane.classList.add('active');
+      }
+
+      // Actualizar botones
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes("'" + lang + "'")) {
+          btn.classList.add('active');
+        }
+      });
+
+      // Actualizar hash en URL sin recargar
+      history.replaceState(null, null, '#' + lang);
+    }
+
+    // Detección automática al cargar
+    window.addEventListener('DOMContentLoaded', () => {
+      let selected = null;
+      // 1. Comprobar si hay hash en la URL (ej: #en, #gl)
+      const hash = window.location.hash.replace('#', '').toLowerCase();
+      if (supportedLangs.includes(hash)) {
+        selected = hash;
+      } else {
+        // 2. Detectar idioma del navegador
+        const navLang = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
+        if (navLang.startsWith('gl')) selected = 'gl';
+        else if (navLang.startsWith('es')) selected = 'es';
+        else if (navLang.startsWith('en')) selected = 'en';
+        else if (navLang.startsWith('fr')) selected = 'fr';
+        else if (navLang.startsWith('pt')) selected = 'pt';
+        else if (navLang.startsWith('de')) selected = 'de';
+        else selected = 'en';
+      }
+
+      switchLang(selected);
+    });
+  </script>
+</body>
+</html>
